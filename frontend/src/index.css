@@ -35,8 +35,8 @@ main {
 }
 footer {
   grid-area: footer;
-  background-color: #203040;
-  color: #ffffff;
+  background-color: #203040; /* Dark blue */
+  color: #ffffff;  /* White */
 }
 /* Common */
 h1 {
@@ -52,8 +52,37 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #ff8000;
+  color: #ff8000; /* Orange */
 }
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+li {
+  margin-top: 1rem;
+}
+button {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem #a4a4a4 solid;  /* Light gray */
+  font-size: 1.6rem;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f8f8; /* Light gray */
+  cursor: pointer;
+}
+button:hover {
+  border: 0.1rem #404040 solid; /* Darker border color */
+}
+button.primary {
+  background-color: #f0c040; /* Gold color */
+}
+button.block {
+  width: 100%;
+}
+
 /* Header */
 header a {
   color: #ffffff;
@@ -73,6 +102,16 @@ a.brand {
 .row.center {
   justify-content: center;
 }
+.row.top {
+  align-items: flex-start;
+}
+.col-1 {
+  flex: 1 1 25rem;
+}
+.col-2 {
+  flex: 2 1 50rem;
+}
+
 /* Image */
 img {
   border-radius: 0.5rem;
@@ -81,11 +120,14 @@ img.medium {
   max-width: 29rem;
   width: 100%;
 }
+img.large {
+  width: 100%;
+}
 
 /* Card */
 .card {
-  border: 0.1rem #c0c0c0 solid;
-  background-color: #f8f8f8;
+  border: 0.1rem #c0c0c0 solid;  /* Gray */
+  background-color: #f8f8f8;   /* Very light gray */
   border-radius: 0.5rem;
   margin: 1rem;
 }
@@ -98,9 +140,20 @@ img.medium {
 .price {
   font-size: 2rem;
 }
+
 /* Rating */
 .rating span {
   color: #f0c040;
   margin: 0.1rem;
 }
+.rating span:last-child {
+  color: #404040;
+}
 
+/* Alert */
+.success {
+  color: #20a020;
+}
+.error {
+  color: #a02020;
+}
