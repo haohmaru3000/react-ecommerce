@@ -75,8 +75,8 @@
     4. Create ./frontend/.env
     5. Add SKIP_PREFLIGHT_CHECK=true
 12. Add Redux to Home Screen
-    1. npm install redux react-redux
-    2. Create store.js in frontend
+    1. npm install redux react-redux (in frontend)
+    2. Create store.js in (frontend/src)
     3. initState= {products:[]}
     4. reducer = (state, action) => switch LOAD_PRODUCTS: {products: action.payload}
     5. export default createStore(reducer, initState)
@@ -85,3 +85,8 @@
     8. const dispatch = useDispatch()
     9. useEffect(()=>dispatch({type: LOAD_PRODUCTS, payload: data})
     10. Add store to index.js
+13. Add Redux to Product Screen
+    1. create product details constants, actions and reducers
+    2. add reducer to store.js
+    3. use action in ProductScreen.js
+    4. add /api/product/:id to backend api
